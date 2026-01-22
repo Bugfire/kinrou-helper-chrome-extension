@@ -1,0 +1,17 @@
+{
+  "name": "kinrou-helper-chrome-extension",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc && cp src/manifest.json src/styles.css src/popup.html dist/",
+    "watch": "tsc --watch",
+    "check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{js,ts}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts}\"",
+    "format:dist": "prettier --write \"dist/**/*.js\" --ignore-path .prettierignore"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.0",
+    "typescript": "^5.3.0"
+  }
+}

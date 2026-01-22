@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Kinrou Helper",
+  "version": "1.0.0",
+  "description": "「勤労の獅子」の操作補助",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://kinrouap1.hr44.jp/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://kinrouap1.hr44.jp/kinrou/kojin/*"],
+      "js": [
+        "lib/constants.js",
+        "lib/state-manager.js",
+        "lib/password-manager.js",
+        "lib/log-manager.js",
+        "lib/utils.js",
+        "lib/ui.js",
+        "lib/workflow.js",
+        "lib/login.js",
+        "lib/main.js"
+      ],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
